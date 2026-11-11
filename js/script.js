@@ -1,8 +1,26 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for valid in-page navigation links.
+// Ignore placeholder links such as href="#" so they do not trigger
+// an invalid querySelector call.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-            .scrollIntoView({ behavior: 'smooth' });
+    const targetSelector = anchor.getAttribute('href');
+
+    if (!targetSelector || targetSelector === '#') {
+        return;
+    }
+
+    let target;
+    try {
+        target = document.querySelector(targetSelector);
+    } catch (error) {
+        return;
+    }
+
+    if (!target) {
+        return;
+    }
+
+    anchor.addEventListener('click', event => {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });

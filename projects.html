@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | Philani Makoba</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected academic and personal software development projects by Philani Makoba.">
+    <title>Projects | Philani Makoba</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-
-<!-- NAVBAR -->
+<body class="page-projects">
 <header>
-  <nav class="navbar">
-    <div class="logo">Philani Makoba</div>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="index.html">Philani Makoba</a>
         <ul class="nav-links">
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="skills.html"><i class="fas fa-laptop-code"></i> Skills</a></li>
-            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="projects.html" class="active"><i class="fas fa-briefcase"></i> Projects</a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user" aria-hidden="true"></i> About</a></li>
+            <li><a href="skills.html" ><i class="fas fa-laptop-code" aria-hidden="true"></i> Skills</a></li>
+            <li><a href="education.html" ><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</a></li>
+            <li><a href="projects.html" class="active" aria-current="page"><i class="fas fa-briefcase" aria-hidden="true"></i> Projects</a></li>
+            <li><a href="contact.html" ><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
         </ul>
-  </nav>
+    </nav>
 </header>
+<main>
+    <section class="portfolio-page-hero">
+        <div class="page-hero-inner">
+            <h1>Projects</h1>
+            <p>A collection of academic and personal work that reflects my learning in software development, web technologies and data-driven applications.</p>
+            <div class="hero-meta">
+                <span><i class="fas fa-laptop-code" aria-hidden="true"></i> Software development</span>
+                <span><i class="fas fa-layer-group" aria-hidden="true"></i> Web applications</span>
+                <span><i class="fas fa-database" aria-hidden="true"></i> Database systems</span>
+            </div>
+        </div>
+    </section>
 
-<!-- HERO SECTION -->
-<section class="page-hero">
-  <div class="page-hero-content">
-    <h1>Projects</h1>
-    <p>
-      A selection of academic and personal projects that demonstrate my technical learning, practical development skills, and approach to solving problems.
-    </p>
-  </div>
-</section>
+    <section class="portfolio-section projects-section">
+        <div class="section-heading-row">
+            <div><span class="eyebrow">PROJECT PORTFOLIO</span><h2>Selected projects</h2><p>Explore a range of application concepts and development work across different technologies.</p></div>
+            <span class="project-count"><strong>01</strong><span>Projects listed</span></span>
+        </div>
 
-<!-- PROJECTS CONTENT -->
-<section class="section section-alt">
-  <div class="projects-grid">
+        <div class="project-gallery">
+            <!--
+            <article class="portfolio-project-card">
+                <div class="portfolio-project-image"><img src="images/student-management.jpg" alt="Student management application dashboard showing student, unit, course and marks summaries" loading="lazy"><span class="project-index">01</span></div>
+                <div class="portfolio-project-body">
+                    <div class="project-card-meta"><span>APPLICATION DEVELOPMENT</span><span>ACADEMIC</span></div>
+                    <h3>Student Management System</h3>
+                    <p>An academic application focused on managing student information and related records, applying programming, database and software development concepts.</p>
+                    <div class="project-tech-list"><span>C#</span><span>SQL</span><span>Database</span></div>
+                    <div class="project-card-bottom"><span class="project-note"><i class="fas fa-book-open" aria-hidden="true"></i> Academic project</span></div>
+                </div>
+            </article>
+        -->
 
-    <div class="project-card">
-      <h3>Student Management System</h3>
-      <p>Academic software project focused on managing student information while applying programming, database, and software development concepts.</p>
-      <p><strong>Tech:</strong> C#, SQL</p>
-      <a href="#" class="project-link">View on GitHub</a>
-    </div>
+            <article class="portfolio-project-card">
+                <div class="portfolio-project-image"><img src="images/portfolio-preview.png" alt="Screenshot of the Philani Makoba personal portfolio website" loading="lazy"><span class="project-index">01</span></div>
+                <div class="portfolio-project-body">
+                    <div class="project-card-meta"><span>WEB DEVELOPMENT</span><span>PERSONAL</span></div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive website presenting my background, technical skills, education and development work, built with a straightforward HTML, CSS and JavaScript stack.</p>
+                    <div class="project-tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-card-bottom"><a class="project-action" href="https://github.com/Philani-Makhoba/Portfolio" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+                </div>
+            </article>
+            
 
-    <div class="project-card">
-      <h3>Personal Portfolio Website</h3>
-      <p>Responsive personal website designed to present my academic background, technical skills, projects, and professional interests.</p>
-      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-      <a href="#" class="project-link">Live Demo</a>
-    </div>
+            <!--
+            <article class="portfolio-project-card">
+                <div class="portfolio-project-image"><img src="images/inventory-system.jpg" alt="Inventory management system concept with stock dashboard and warehouse image" loading="lazy"><span class="project-index">03</span></div>
+                <div class="portfolio-project-body">
+                    <div class="project-card-meta"><span>INFORMATION SYSTEMS</span><span>PROJECT WORK</span></div>
+                    <h3>Inventory Management System</h3>
+                    <p>An application project centred on inventory tracking, managing records and applying relational database concepts to stock information.</p>
+                    <div class="project-tech-list"><span>Java</span><span>MySQL</span><span>Database</span></div>
+                    <div class="project-card-bottom"><span class="project-note"><i class="fas fa-code" aria-hidden="true"></i> Software project</span></div>
+                </div>
+            </article>
 
-    <div class="project-card">
-      <h3>Inventory Management System</h3>
-      <p>Application project focused on inventory tracking, application logic, and relational database management.</p>
-      <p><strong>Tech:</strong> Java, MySQL</p>
-      <a href="#" class="project-link">View on GitHub</a>
-    </div>
+            <article class="portfolio-project-card">
+                <div class="project-artwork cybersecurity-artwork" role="img" aria-label="Decorative cybersecurity illustration with shield and lock symbols">
+                    <span class="project-index">04</span>
+                    <div class="security-orbit orbit-one"></div><div class="security-orbit orbit-two"></div>
+                    <div class="security-shield"><i class="fas fa-shield-halved" aria-hidden="true"></i><i class="fas fa-lock security-lock" aria-hidden="true"></i></div>
+                    <span class="security-caption">DIGITAL SAFETY</span>
+                </div>
+                <div class="portfolio-project-body">
+                    <div class="project-card-meta"><span>WEB APPLICATION</span><span>EDUCATIONAL</span></div>
+                    <h3>Cybersecurity Awareness Tool</h3>
+                    <p>An educational web application concept focused on introducing users to cybersecurity fundamentals and safer digital practices.</p>
+                    <div class="project-tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-card-bottom"><span class="project-note"><i class="fas fa-shield-alt" aria-hidden="true"></i> Educational project</span></div>
+                </div>
+            </article>
 
-    <div class="project-card">
-      <h3>Cybersecurity Awareness Tool</h3>
-      <p>Educational web application focused on introducing users to basic cybersecurity concepts and safe digital practices.</p>
-      <p><strong>Tech:</strong> JavaScript, HTML, CSS</p>
-      <a href="#" class="project-link">Live Demo</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Philani Makoba. All Rights Reserved.</p>
+        -->
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <p>© 2026 Philani Makoba. All Rights Reserved.</p>
 </footer>
-
 </body>
 </html>
