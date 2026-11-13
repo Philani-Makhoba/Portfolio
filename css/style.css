@@ -2611,3 +2611,989 @@ footer,
 .site-footer {
     background: rgba(36, 68, 95, 0.96);
 }
+
+
+/* =========================================================
+   ABOUT PAGE REDESIGN
+   Philani Makoba Portfolio
+   Steel Blue | Muted Gold | Light Grey
+========================================================= */
+
+
+/* =========================================================
+   PAGE FOUNDATION
+========================================================= */
+
+body.page-about {
+    background: var(--background);
+    color: var(--text);
+}
+
+.page-about .about-main {
+    position: relative;
+    z-index: 1;
+}
+
+.page-about .site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.page-about .about-shell {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.page-about .about-eyebrow,
+.page-about .about-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.page-about .about-eyebrow-line {
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   GLOBAL CONSTELLATION LAYER FOR ABOUT PAGE
+
+   The script inserts the canvas directly into body.
+   Keep it above the body background and below the content.
+========================================================= */
+
+body.page-about {
+    isolation: isolate;
+}
+
+body.page-about > .site-network-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+body.page-about > header {
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   INTRODUCTION / PROFILE HERO
+========================================================= */
+
+.page-about .about-intro {
+    position: relative;
+    overflow: hidden;
+    padding: 9.5rem 0 5.75rem;
+    background: rgba(237, 242, 245, 0.72);
+    border-bottom: 1px solid rgba(199, 139, 58, 0.35);
+}
+
+.page-about .about-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 6.5rem);
+}
+
+.page-about .about-intro-content {
+    max-width: 660px;
+}
+
+.page-about .about-intro-content h1 {
+    color: var(--primary-dark);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2.2px;
+    line-height: 1.08;
+    margin: 1.4rem 0 1rem;
+}
+
+.page-about .about-intro-content h1 span {
+    color: var(--primary);
+}
+
+.page-about .about-intro-content h2 {
+    color: var(--primary);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1.65rem;
+}
+
+.page-about .about-heading-divider {
+    color: var(--accent);
+    padding: 0 5px;
+}
+
+.page-about .about-intro-lead {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.page-about .about-intro-description {
+    color: var(--muted-text);
+    font-size: 1rem;
+    line-height: 1.9;
+    max-width: 620px;
+}
+
+
+/* Interest tags */
+
+.page-about .about-focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.8rem;
+}
+
+.page-about .about-focus-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.48rem 0.85rem;
+    border: 1px solid rgba(49, 91, 125, 0.16);
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--primary-dark);
+    border-radius: 5px;
+    font-size: 0.78rem;
+    font-weight: 650;
+    transition: border-color 0.2s ease,
+                background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.page-about .about-focus-tags span:hover {
+    background: #FFFFFF;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+/* Academic identity */
+
+.page-about .about-identity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding-top: 1.6rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.page-about .about-identity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.page-about .about-identity-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.page-about .about-identity-item strong,
+.page-about .about-identity-item span {
+    display: block;
+}
+
+.page-about .about-identity-item strong {
+    color: var(--primary-dark);
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+.page-about .about-identity-item div > span {
+    color: var(--muted-text);
+    font-size: 0.78rem;
+    margin-top: 2px;
+}
+
+.page-about .about-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.page-about .status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4D9B76;
+    box-shadow: 0 0 0 4px rgba(77, 155, 118, 0.12);
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.page-about .about-profile-area {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    padding: 0 12px 22px 0;
+}
+
+.page-about .about-profile-card {
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 22px 55px rgba(36, 68, 95, 0.13);
+}
+
+.page-about .about-profile-image {
+    overflow: hidden;
+    background: var(--alt-bg);
+    border-radius: 11px;
+}
+
+.page-about .about-profile-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.42 / 1;
+    object-fit: cover;
+    object-position: center 38%;
+    transition: transform 0.45s ease;
+}
+
+.page-about .about-profile-card:hover .about-profile-image img {
+    transform: scale(1.035);
+}
+
+.page-about .about-profile-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0.65rem 0.45rem;
+}
+
+.page-about .about-profile-caption strong,
+.page-about .about-profile-caption span {
+    display: block;
+}
+
+.page-about .about-profile-caption strong {
+    color: var(--primary-dark);
+    font-size: 1rem;
+}
+
+.page-about .about-profile-caption div > span {
+    color: var(--muted-text);
+    font-size: 0.77rem;
+    margin-top: 3px;
+}
+
+.page-about .about-profile-caption-icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 50%;
+}
+
+.page-about .about-profile-badge {
+    position: absolute;
+    left: -28px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.85rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.page-about .about-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 9px;
+}
+
+.page-about .about-profile-badge strong,
+.page-about .about-profile-badge span {
+    display: block;
+}
+
+.page-about .about-profile-badge strong {
+    color: var(--primary-dark);
+    font-size: 0.83rem;
+}
+
+.page-about .about-profile-badge div > span {
+    color: var(--muted-text);
+    font-size: 0.72rem;
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   SHARED SECTION SPACING
+========================================================= */
+
+.page-about .about-section {
+    position: relative;
+    padding: 5.75rem 0;
+}
+
+.page-about .about-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 2.6rem;
+}
+
+.page-about .about-section-heading > div {
+    flex: 1;
+}
+
+.page-about .about-section-heading h2 {
+    max-width: 640px;
+    color: var(--primary-dark);
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    margin-top: 0.8rem;
+}
+
+.page-about .about-section-heading > p {
+    max-width: 420px;
+    color: var(--muted-text);
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ACADEMIC BACKGROUND AND TECHNICAL INTERESTS
+========================================================= */
+
+.page-about .about-background {
+    background: transparent;
+}
+
+.page-about .about-background-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+
+/* Academic foundation panel */
+
+.page-about .about-foundation-card {
+    padding: clamp(1.8rem, 3vw, 2.6rem);
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.page-about .about-card-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.page-about .about-card-category {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.page-about .about-card-topline > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 10px;
+    font-size: 1.05rem;
+}
+
+.page-about .about-foundation-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin: 1.1rem 0 0.9rem;
+}
+
+.page-about .about-foundation-card > p {
+    color: var(--muted-text);
+    font-size: 0.94rem;
+    line-height: 1.85;
+}
+
+.page-about .about-foundation-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.65rem 0;
+}
+
+.page-about .about-degree-details {
+    display: grid;
+    gap: 1rem;
+}
+
+.page-about .about-degree-details > div {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.page-about .about-degree-details span {
+    color: var(--muted-text);
+    font-size: 0.8rem;
+}
+
+.page-about .about-degree-details strong {
+    color: var(--primary-dark);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.page-about .about-inline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.7rem;
+    color: var(--primary);
+    font-size: 0.88rem;
+    font-weight: 750;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.page-about .about-inline-link:hover {
+    color: var(--accent);
+    gap: 0.9rem;
+}
+
+
+/* Technical interests */
+
+.page-about .about-interests {
+    padding: 1.8rem 0.5rem 1.8rem 1.5rem;
+}
+
+.page-about .about-interests > h3 {
+    color: var(--primary-dark);
+    font-size: 1.55rem;
+    margin-top: 0.9rem;
+}
+
+.page-about .about-interests-intro {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0.5rem 0 1.2rem;
+}
+
+.page-about .about-interest-item {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-about .about-interest-item:last-child {
+    border-bottom: 0;
+}
+
+.page-about .about-interest-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.page-about .about-interest-item h4 {
+    color: var(--primary-dark);
+    font-size: 0.96rem;
+    margin-bottom: 0.25rem;
+}
+
+.page-about .about-interest-item p {
+    color: var(--muted-text);
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
+.page-about .about-interest-number {
+    color: #A7B3BC;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HOW I APPROACH A CHALLENGE
+========================================================= */
+
+.page-about .about-approach {
+    background: rgba(237, 242, 245, 0.62);
+    border-top: 1px solid rgba(216, 224, 230, 0.8);
+    border-bottom: 1px solid rgba(216, 224, 230, 0.8);
+}
+
+.page-about .about-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.page-about .about-approach-card {
+    min-height: 250px;
+    padding: 1.8rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(28, 47, 62, 0.045);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.page-about .about-approach-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(199, 139, 58, 0.55);
+    box-shadow: var(--shadow-hover);
+}
+
+.page-about .about-approach-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.page-about .about-step-number {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.page-about .about-approach-card-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 11px;
+    font-size: 1.15rem;
+}
+
+.page-about .about-approach-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.18rem;
+    margin-bottom: 0.7rem;
+}
+
+.page-about .about-approach-card p {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROFESSIONAL STRENGTHS
+========================================================= */
+
+.page-about .about-strengths {
+    background: transparent;
+}
+
+.page-about .about-strength-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.page-about .about-strength-card {
+    padding: 1.55rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: transform 0.22s ease,
+                border-color 0.22s ease,
+                box-shadow 0.22s ease;
+}
+
+.page-about .about-strength-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(199, 139, 58, 0.6);
+    box-shadow: var(--shadow);
+}
+
+.page-about .about-strength-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    background: rgba(199, 139, 58, 0.11);
+    border-radius: 10px;
+    font-size: 1.05rem;
+}
+
+.page-about .about-strength-card h3 {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+
+.page-about .about-strength-card p {
+    color: var(--muted-text);
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CAREER DIRECTION
+========================================================= */
+
+.page-about .about-direction {
+    padding: 1.5rem 0 6rem;
+    background: transparent;
+}
+
+.page-about .about-direction-panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    overflow: hidden;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    background: var(--primary-dark);
+    border-radius: 16px;
+    box-shadow: 0 18px 42px rgba(36, 68, 95, 0.16);
+}
+
+.page-about .about-direction-content {
+    max-width: 690px;
+}
+
+.page-about .about-direction-label {
+    color: #E0B775;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.page-about .about-direction-content h2 {
+    color: #FFFFFF;
+    font-size: clamp(1.9rem, 3.5vw, 2.65rem);
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.page-about .about-direction-content p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.94rem;
+    line-height: 1.85;
+}
+
+.page-about .about-direction-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.page-about .about-direction-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.2rem;
+    background: var(--accent);
+    color: #FFFFFF;
+    border: 1px solid var(--accent);
+    border-radius: 7px;
+    font-size: 0.86rem;
+    font-weight: 750;
+    white-space: nowrap;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.page-about .about-direction-button:hover {
+    background: #B77A2B;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.page-about .about-direction-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 650;
+    transition: color 0.2s ease;
+}
+
+.page-about .about-direction-link:hover {
+    color: #E0B775;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .page-about .about-intro-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(270px, 0.9fr);
+        gap: 2.5rem;
+    }
+
+    .page-about .about-profile-badge {
+        left: -12px;
+    }
+
+    .page-about .about-strength-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-about .about-section-heading {
+        gap: 2rem;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .page-about .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .page-about .about-intro-content {
+        max-width: 720px;
+    }
+
+    .page-about .about-profile-area {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .page-about .about-background-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .page-about .about-interests {
+        padding: 1.5rem 0;
+    }
+
+    .page-about .about-approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-about .about-approach-card {
+        min-height: auto;
+    }
+
+    .page-about .about-section-heading {
+        display: block;
+    }
+
+    .page-about .about-section-heading > p {
+        margin-top: 1rem;
+    }
+
+    .page-about .about-direction-panel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .page-about .about-direction-actions {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .page-about .about-shell {
+        width: min(100% - 36px, 460px);
+    }
+
+    .page-about .about-intro {
+        padding: 8.5rem 0 4rem;
+    }
+
+    .page-about .about-intro-content h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1.5px;
+    }
+
+    .page-about .about-intro-content h2 {
+        font-size: 1rem;
+    }
+
+    .page-about .about-intro-lead {
+        font-size: 1.05rem;
+    }
+
+    .page-about .about-intro-description {
+        font-size: 0.92rem;
+    }
+
+    .page-about .about-identity {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-about .about-profile-area {
+        padding-left: 8px;
+    }
+
+    .page-about .about-profile-badge {
+        left: 0;
+        bottom: -12px;
+        padding: 0.7rem;
+    }
+
+    .page-about .about-section {
+        padding: 4rem 0;
+    }
+
+    .page-about .about-section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .page-about .about-foundation-card {
+        padding: 1.4rem;
+    }
+
+    .page-about .about-foundation-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .page-about .about-degree-details > div {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .page-about .about-interest-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+    }
+
+    .page-about .about-interest-number {
+        display: none;
+    }
+
+    .page-about .about-strength-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-about .about-direction {
+        padding: 0 0 4rem;
+    }
+
+    .page-about .about-direction-panel {
+        padding: 1.65rem;
+    }
+
+    .page-about .about-direction-content h2 {
+        font-size: 1.85rem;
+    }
+
+    .page-about .about-direction-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-about *,
+    .page-about *::before,
+    .page-about *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
